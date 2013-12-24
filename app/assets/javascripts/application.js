@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$('.btn').click( function(e) {
+  e.preventDefault();
+
+  $.post("/click", function(data) {
+    $('.direction').html(data.new_direction)
+  })
+})

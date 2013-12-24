@@ -1,17 +1,21 @@
 class WelcomeController < ApplicationController
 
   def show
+    @status = Status.first
+    @new_direction = @status.status == "on" ? "OFF" : "ON"
   end
 
   def click
     @status = Status.first
     if @status.status == "on"
       turn_off
+      new_direction = "ON"
     else
       turn_on
+      new_direction = "OFF"
     end
 
-    render :nothing => true
+    render json: {:new_direction => new_direction}
   end
 
   def turn_off
