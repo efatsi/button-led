@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: button_development
+  pool: 5
+  username: efatsi
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: button_test
+  pool: 5
+  username: efatsi
+  password:
+  host: localhost
