@@ -1,8 +1,9 @@
 window.Button = angular.module('Button', ['ngResource'])
 
-Button.config ($httpProvider) ->
+Button.config ['$httpProvider', ($httpProvider) ->
   authToken = $("meta[name=\"csrf-token\"]").attr("content")
   $httpProvider.defaults.headers.common["X-CSRF-TOKEN"] = authToken
+]
 
 Button.factory 'Status', ['$resource', ($resource) ->
   $resource '/api/status',
