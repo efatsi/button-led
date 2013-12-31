@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+
+.btn-primary {
+  height: 100px;
+  width: 300px;
+}
+
+.btn-text {
+  font-size: 58px;
+  text-transform: uppercase;
+}

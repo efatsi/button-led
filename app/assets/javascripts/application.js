@@ -13,11 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-$('.btn').click( function(e) {
-  e.preventDefault();
-
-  $.post("/click", function(data) {
-    $('.direction').html(data.new_direction)
-  })
-})
+//= require app

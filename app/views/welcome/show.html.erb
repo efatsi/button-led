@@ -6,7 +6,9 @@
   </div>
 </span>
 <div style="margin: 10px auto; width: 300px; text-align:center;">
-  <%= link_to click_path, :class => "btn btn-primary", :style => "height: 100px; width: 300px; font-size: 58px;" do %>
-    TURN <span class="direction"><%= @new_direction %>
-  <% end %>
+  <a ng-href="#" ng-click="click()" class="btn btn-primary">
+    <span class="btn-text">
+      TURN {{oppositeStatus()}}
+    </span>
+  </a>
 </div>
